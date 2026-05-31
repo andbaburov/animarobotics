@@ -109,13 +109,18 @@
                 order: 2;
             }
             .page-render {
-                width: 100%;           /* Растягиваем на всю ширину экрана телефона */
-                height: auto;          /* Высота подстраивается сама, сохраняя пропорции */
-                object-fit: contain;     /* Картинка сжимается аккуратно и становится полностью цельной */
+                width: 100%;
+                height: auto;
+                object-fit: contain;
                 
-                /* Корректируем маску, чтобы на узком экране мобильного эффект растворения не сжимался */
-                -webkit-mask-image: radial-gradient(85% 85% at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
-                mask-image: radial-gradient(85% 85% at 50% 50%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+                /* Отключаем проблемное пересечение двух масок на мобильных */
+                -webkit-mask-composite: source-over !important;
+                mask-composite: add !important;
+                
+                /* ВАШИ РОДНЫЕ НАСТРОЙКИ: эллипс 70% на 65% и смещение центра на 52% вправо */
+                /* Оставляем плавное растворение от 30% до 100% прямо в темноту */
+                -webkit-mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
+                mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
                 
                 order: 1;
             }
