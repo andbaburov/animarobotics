@@ -96,6 +96,23 @@
             margin-bottom: 35px;
             font-weight: 500;
         }
+        /* Ссылки внутри строки маскируются под обычный текст */
+        .feature-link {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        /* При наведении текст будет слегка подсвечиваться белым, как дорогие интерфейсы */
+        .feature-link:hover {
+            color: #d2d2d7;
+        }
+        /* Символ точки-разделителя, который нельзя нажать */
+        .feature-separator {
+            padding: 0 10px;
+            user-select: none;
+        }
+
         .status-badge {
             display: inline-block;
             padding: 8px 18px;
@@ -143,7 +160,14 @@
         
         <p class="tagline">Next-generation anthropomorphic AI companion with deep empathy and tactile sensory systems.</p>
         
-        <div class="features">Fully Local Server &bull; Zero Filters &bull; Absolute Privacy</div>
+        <div class="features">
+            <a href="server.html" class="feature-link">Fully Local Server</a>
+            <span class="feature-separator">&bull;</span>
+            <a href="filters.html" class="feature-link">Zero Filters</a>
+            <span class="feature-separator">&bull;</span>
+            <a href="privacy.html" class="feature-link">Absolute Privacy</a>
+        </div>
+
         
         <div class="status-badge">Official premiere at the exhibition in 2027</div>
         
