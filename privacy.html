@@ -88,8 +88,7 @@
     box-shadow: 0 0 80px rgba(0, 102, 204, 0.1);
     filter: hue-rotate(10deg) saturate(1.1);
 
-    /* СВЕРХМЯГКОЕ РАСТВОРЕНИЕ БЕЗ ПОЛОС И ГРАНИЦ: */
-    /* Вместо круга делаем вытянутый эллипс с очень длинным, плавным спадом от 30% до 100% */
+   
     -webkit-mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%),
                         linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%),
@@ -113,12 +112,11 @@
                 height: auto;
                 object-fit: contain;
                 
-                /* Отключаем проблемное пересечение двух масок на мобильных */
+               
                 -webkit-mask-composite: source-over !important;
                 mask-composite: add !important;
                 
-                /* ВАШИ РОДНЫЕ НАСТРОЙКИ: эллипс 70% на 65% и смещение центра на 52% вправо */
-                /* Оставляем плавное растворение от 30% до 100% прямо в темноту */
+                
                 -webkit-mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
                 mask-image: radial-gradient(70% 65% at 52% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%) !important;
                 
