@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- === НАЧАЛО БЛОКА ДЛЯ ПОИСКОВЫХ РОБОТОВ GOOGLE И ЯНДЕКСА === -->
     <title>Anima Robotics — Anthropomorphic Biorobotics</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Anima Robotics Official Website. Next-generation anthropomorphic AI companion robots with deep empathy, lifelike skin, and absolute data privacy. Local server architecture. Premiere in 2027.">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="hrqpFtP0JL8XAdfWON6MvFkojFO3lrMgQsC99DZMVCI" />
-    <!-- === КОНЕЦ БЛОКА ДЛЯ ПОИСКОВЫХ РОБОТОВ === -->
+    
 
     <style>
         * {
@@ -31,7 +30,6 @@
             overflow-x: hidden;
             position: relative;
         }
-        /* Исправленный эффект мягкого глубокого свечения на фоне */
         body::before {
             content: '';
             position: absolute;
@@ -51,13 +49,33 @@
         .logo {
             font-size: 2.3rem;
             font-weight: 200;
-            letter-spacing: 0.35em;
+            letter-spacing: 0.6em;
             text-transform: uppercase;
             background: linear-gradient(180deg, #ffffff 0%, #8e8e93 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 25px; 
+        }
+        .hero-manifesto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-top: 40px;
             margin-bottom: 10px;
         }
+        .manifesto-line {
+            font-size: 0.95rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            line-height: 1.2;
+            background: linear-gradient(180deg, #ffffff 40%, #6e6e73 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
         main {
             max-width: 800px;
             text-align: center;
@@ -67,17 +85,17 @@
             align-items: center;
             margin: auto 0;
         }
-        /* Оптимизированный блок под вертикальный прямоугольный формат арта */
         .concept-art {
             width: auto;
             max-width: 100%;
-            height: 52vh; /* Картинка займет чуть больше половины экрана, идеально для вертикального силуэта */
-            margin-bottom: 35px;
+            height: 58vh; 
+            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 50px rgba(0, 102, 204, 0.12); /* Мягкий бирюзово-синий ореол вокруг робота */
             display: block;
             margin-left: auto;
             margin-right: auto;
+            -webkit-mask-image: radial-gradient( 100% 53% at 50% 53%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+            mask-image: radial-gradient( 100% 53% at 50% 53%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
         }
         .tagline {
             font-size: 1.15rem;
@@ -96,18 +114,15 @@
             margin-bottom: 35px;
             font-weight: 500;
         }
-        /* Ссылки внутри строки маскируются под обычный текст */
         .feature-link {
             color: #0066cc;
             text-decoration: none;
             transition: color 0.3s ease;
             cursor: pointer;
         }
-        /* При наведении текст будет слегка подсвечиваться белым, как дорогие интерфейсы */
         .feature-link:hover {
             color: #d2d2d7;
         }
-        /* Символ точки-разделителя, который нельзя нажать */
         .feature-separator {
             padding: 0 10px;
             user-select: none;
@@ -141,10 +156,26 @@
         footer {
             text-align: center;
             font-size: 0.75rem;
-            color: #2c2c2e; /* Более приглушенный цвет для сохранения фокуса на продукте */
+            color: #2c2c2e; 
             letter-spacing: 0.1em;
             text-transform: uppercase;
             z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.3rem;
+            }
+            .manifesto-line {
+                font-size: 1rem;
+                letter-spacing: 0.08em;
+            }
+            .hero-manifesto {
+                margin-bottom: 30px;
+            }
+            .concept-art {
+                height: 52 !important;
+            }
         }
     </style>
 </head>
@@ -152,10 +183,15 @@
 
     <header>
         <div class="logo">Anima Robotics</div>
+        
+        <div class="hero-manifesto">
+            <div class="manifesto-line">What do you know of Anima?</div>
+            <div class="manifesto-line">Is it just a word — the soul?</div>
+            <div class="manifesto-line">And what if it can exist inside the synthetic?</div>
+        </div>
     </header>
 
     <main>
-        <!-- Арт с оптическими волокнами встанет сюда -->
         <img class="concept-art" src="robot.jpg" alt="Anima Robotics Structural Concept" onerror="this.style.display='none'">
         
         <p class="tagline">Next-generation anthropomorphic AI companion with deep empathy and tactile sensory systems.</p>
@@ -180,4 +216,3 @@
 
 </body>
 </html>
-
